@@ -1,0 +1,66 @@
+GET http://localhost:3000/user-api/users
+
+###
+PUT http://localhost:3000/user-api/users/id
+Content-Type: application/json
+
+{
+    "id":100,
+    "name":"Vineel",
+    "age":20
+}
+
+### 
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":100,
+    "name":"Krishna",
+    "age":19
+}
+
+### read a user by id
+GET http://localhost:3000/user-api/users/100
+
+
+### 
+DELETE http://localhost:3000/user-api/users/100
+
+
+### product testing 
+
+GET http://localhost:3000/product-api/products
+
+
+###
+GET http://localhost:3000/product-api/products-id/100
+
+###
+GET http://localhost:3000/product-api/products-brand/nike
+
+### 
+
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+    "productId":100,
+    "name":"T-shirt",
+    "price":1000,
+    "brand":"Rare-Rabbit"
+}
+
+###
+PUT http://localhost:3000/product-api/products/100
+Content-Type: application/json
+
+{
+    "productId":100,
+    "name":"T-shirt",
+    "price":1000,
+    "brand":"Rare-Rabbit"
+}
+
+### 
+DELETE http://localhost:3000/product-api/products/100
