@@ -1,0 +1,110 @@
+### User register
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "firstName":"Vineel",
+    "lastName":"Krishna",
+    "email":"vineel183sainik@gmial.com",
+    "password":"vineel183",
+    "profileImageUrl":"http://example.com/profile-picture.jpg"
+}
+
+
+### User login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+    "email":"vineel183sainik@gmial.com",
+    "password":"vineel183",
+    "role": "USER"
+}
+
+
+### REading all articles from user side
+GET http://localhost:4000/user-api/user/69896c6e0f4f991307d71ff3/articles
+
+
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+    "firstName": "vikas",
+    "lastName": "author",
+    "email": "vikas.author@example.com",
+    "password": "password123",
+    "profileImageUrl": "https://example.com/profile-picture.jpg"
+}
+
+### Author Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+    "email": "vikas.author@example.com",
+    "password": "password123",
+    "role": "AUTHOR"
+}
+
+### Create article
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"69897806c3fe18480f1ec566",
+    "title": "My First Article",
+    "category": "Technology",
+    "content": "This is the content of my first article."
+}
+
+
+###Read articels of a author
+GET http://localhost:4000/author-api/articles/69897806c3fe18480f1ec566
+
+###
+GET http://localhost:4000/author-api/articles/69897806c3fe18480f1ec566
+
+### update article(AUTHOR)
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"69897806c3fe18480f1ec566",
+    "articleId":"69899cb246ea5374b903e31b",
+    "title":"Test article",
+    "category":"programming",
+    "content":"This is a sample program - test"
+}
+
+###
+GET http://localhost:4000/author-api/articles/69897806c3fe18480f1ec566
+
+
+
+###
+GET http://localhost:4000/user-api/articles
+
+### Soft delete an article (AUTHOR)
+DELETE http://localhost:4000/author-api/articles/69898241c8c9f32745bfad9d
+Content-Type: application/json
+
+{
+    "author":"69897806c3fe18480f1ec566"
+}
+
+
+
+### test req
+GET http://localhost:4000/test
+
+
+### Block user (toggle)
+PUT http://localhost:4000/admin-api/block-user/69896c6e0f4f991307d71ff3
+
+
+
+
+### Unblock user (toggle)
+PUT http://localhost:4000/admin-api/block-user/69896c6e0f4f991307d71ff3
